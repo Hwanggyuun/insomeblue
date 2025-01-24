@@ -1,0 +1,24 @@
+.NaviTop {
+    height: 19%;
+    
+   display: flex;
+   justify-content: start;
+   gap : 1.3rem;
+    padding : 1rem 17rem;
+
+  }
+  .CI{
+    width: 15%; 
+    height: auto;
+    object-fit: contain;
+    padding : 1.5rem 1.5rem 1.5rem 0;
+
+  }
+  .Topitem{
+    padding : 1.5rem;
+    color:white;
+  }
+  .active{
+    color:#00a8cf;
+  }
+  

@@ -1,0 +1,84 @@
+/* 전체 배경 */
+.background {
+
+    background-color: #333333; /* 어두운 배경색 */
+    color: #ffffff; /* 기본 텍스트 색상 흰색 */
+    padding: 4rem 17rem; /* 상하좌우 여백 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  }
+  
+  /* 왼쪽 콘텐츠 */
+  .leftcontent {
+    width: 70%; 
+    display: flex;
+    flex-direction: column;
+    border-right: gray solid 1px;
+  }
+  
+  .img {
+    width: 120px; /* 로고 크기 */
+    margin-bottom: 20px;
+  }
+  
+  .address {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 정보 간격 */
+    margin-bottom: 20px;
+  }
+  
+  .infor {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .blue {
+    color: #00a8cf; /* 파란색 강조 */
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .water {
+    font-size: 0.8rem;
+    color: #aaaaaa; /* 연한 회색 */
+    margin-top: 15px;
+  }
+  
+  /* 오른쪽 콘텐츠 */
+  .rightcontent {
+    max-width: 30%; /* 최대 너비 제한 */
+  }
+  
+  .rightcontentbox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 항목 간격 */
+    text-align: left; /* 오른쪽 정렬 */
+  }
+  
+  .bluecontent {
+    color: #00a8cf; /* 파란색 강조 */
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .content {
+    color: #ffffff;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .content:hover,
+  .bluecontent:hover {
+    text-decoration: underline; /* 호버 시 밑줄 표시 */
+  }
+  

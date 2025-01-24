@@ -1,0 +1,168 @@
+/* 전체 박스 스타일 */
+.Box {
+    padding: 40px 17rem 0rem 17rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  @font-face {
+    font-family: 'poppinbold';
+    src: url('/src/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  }
+  /* 타이틀 스타일 */
+  .Title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #000;
+    font-family: 'poppinbold',sans-serif ;
+  }
+  
+  .blue {
+    color: #00B3D4; /* 파란색 강조 */
+    display: inline;
+  }
+  
+  /* 서브타이틀 */
+  .subTitle {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 550;
+    margin-bottom:2.5rem;
+  }
+  
+  /* 이미지 박스 */
+.imgbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftimgbox {
+    width: 28rem;
+    background-image: url('/imgbox1.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    aspect-ratio:1/1;
+    position:relative;
+}
+
+.bottombox {
+    width: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    position: absolute;
+    bottom:0;
+    border-radius: 0 0 30% 30%;
+    height: 8rem;
+}
+
+.Dell {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    left: 3rem;
+    bottom: 4rem;
+}
+
+.whatthat {
+    font-size: 1rem;
+    color: white;
+    position: absolute;
+    left: 3rem;
+    bottom: 2rem;
+}
+
+.rightimgbox {
+    width: 28rem;
+    aspect-ratio:1/1;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:1rem;
+    gap : 1rem;
+}
+
+.img {
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+    border-radius: 11%;
+
+}
+@font-face {
+    font-family: 'PreBold';
+    src: url('/src/assets/fonts/Pretendard-Bold.ttf') format('truetype');
+  }
+.more {
+    font-family: 'PreBold';
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #00B3D4;
+    width: 13rem;
+    height: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 11%;
+
+}
+
+.more svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.more:hover svg {
+    transform: translateX(5px);
+}
+  
+  /* 하단 강조 섹션 */
+  .impact {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 12rem
+  }
+  
+  .impactcontent {
+    font-family: 'PreBold';
+    font-size: 1.5rem;
+    color: #333333;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  
+  .plus {
+    display: inline-flex; /* 텍스트와 기호를 나란히 배치 */
+    align-items: center; /* 세로 정렬 */
+    justify-content: center; /* 가로 정렬 */
+    font-size: 1rem; /* 폰트 크기 */
+    color: #000; /* 기본 텍스트 색상 */
+    border: 1px solid #000; /* 테두리 추가 */
+    border-radius: 5px; /* 둥근 테두리로 더 길쭉한 느낌 */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .plus:hover {
+    background-color: #000; /* 호버 시 배경색 검정 */
+    color: #fff; /* 텍스트와 기호 색상을 흰색으로 변경 */
+  }
+  
+  .plus span {
+    font-size: 1.2rem; /* 기호 크기 */
+    font-weight: normal;
+    margin-left:1px;
+    font-weight: 400; /* 기호를 얇게 */
+    /* 기호는 일반 두께 */
+  }
+.brand{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+  

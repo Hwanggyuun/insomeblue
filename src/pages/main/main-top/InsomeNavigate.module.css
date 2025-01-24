@@ -1,0 +1,84 @@
+/* 공통 스타일 */
+.NaviBox {
+    width: 100%;
+    height: 32rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('/mainpage.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+
+  .NaviBottom {
+    height: 81%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:7rem 10rem 0 17rem;
+  }
+  
+  /* 왼쪽 텍스트 박스 */
+  .Bottomleft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .subTitle {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 540;
+
+  }
+  
+  .Title {
+    font-size: 2.2rem;
+    color: #000;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 700;
+  }
+  
+  .content {
+    font-size: 0.8rem;
+    color: #555555;
+    line-height: 1.8;
+    color: white;
+    font-weight: 500;
+  }
+  
+  /* 오른쪽 버튼 박스 */
+  .Bottomright {
+    flex: 0.3;
+    display: flex;
+    justify-content: start;
+    gap: 3rem;
+    padding-top: 5.5rem
+  }
+  
+  .leftbutton,
+.rightbutton {
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid #ffffff; /* 흰색 테두리 */
+  border-radius: 50%; /* 원형 버튼 */
+  background-color: transparent; /* 배경 투명 */
+  color: #ffffff; /* 기호 색상 흰색 */
+  font-size: 24px; /* 기호 크기 */
+  font-weight: bold; /* 기호를 더 굵게 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* 부드러운 효과 */
+}
+
+.leftbutton:hover,
+.rightbutton:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* 흰색 투명 배경 추가 */
+}
+
+  

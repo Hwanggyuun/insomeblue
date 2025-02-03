@@ -2,8 +2,8 @@ import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 const Main = () => {
 
-    const s_lat = 37.55465000468857;
-    const s_lng = 126.97059787494679;
+    const s_lat = 37.5467683738173;
+    const s_lng = 127.065279307819;
     console.log(window.kakao);
 
     return (

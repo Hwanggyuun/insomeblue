@@ -1,0 +1,213 @@
+/* 전체 박스 스타일 */
+.Box {
+    height: auto;
+    padding: 3rem 17rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 상단 콘텐츠 박스 */
+.Top {
+    display: flex;
+    gap: 4.5rem;
+    height: auto;
+}
+
+/* 이미지 스타일 */
+.img {
+    width: 45%;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 텍스트 박스 */
+.TopcontentBox {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 0.2rem;
+    padding-top: 5rem;
+}
+
+/* 작은 제목 */
+.minititle {
+    font-size: 1.2rem;
+    font-family: 'PreBold';
+}
+
+/* 제목 */
+.subtitle {
+    font-family: 'PreBold';
+    font-size: 2rem;
+}
+
+.title {
+    font-family: 'PreBold';
+    color: #00B3D4;
+    font-size: 2.3rem;
+}
+
+/* 본문 내용 */
+.content {
+    font-size: 1rem;
+    padding-top: 3rem;
+    font-family: 'Pre';
+}
+
+/* 하단 이미지 박스 */
+.Bottom {
+    width: 100%;
+    height: auto;
+}
+
+.imgbox {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 왼쪽, 오른쪽 이미지 */
+.imgcontent:first-child {
+    background-image: url('/about2.jpg');
+}
+
+.imgcontent:last-child {
+    background-image: url('/about3.jpg');
+}
+
+.imgcontent {
+    border-radius: 1rem;
+    width: 48%;
+    aspect-ratio: 1.5 / 1;
+    position: relative;
+}
+
+/* 이미지 내 폰트 박스 */
+.fontbox {
+    position: absolute;
+    bottom: 2rem;
+    padding: 0 2rem;
+}
+
+/* 강조된 텍스트 */
+.bold {
+    font-family: 'PreBold';
+    color: white;
+    display: flex;
+    font-size: 2rem;
+}
+
+.blue {
+    color: #00B3D4;
+}
+
+.font {
+    color: white;
+    font-size: 1.4rem;
+    padding-top: 1rem;
+    font-family: 'PreBold';
+}
+
+/* ✅ 반응형 스타일 추가 */
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+    .Box {
+        padding: 3rem 5rem; /* 🔥 여백 축소 */
+    }
+    .Top {
+        gap: 3rem;
+    }
+    .img {
+        width: 50%;
+    }
+    .minititle {
+        font-size: 1rem;
+    }
+    .subtitle {
+        font-size: 1.8rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .content {
+        font-size: 0.9rem;
+        padding-top: 2rem;
+    }
+    .imgcontent {
+        width: 47%;
+    }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+    .Box {
+        padding: 2rem;
+        height: auto; /* 🔥 높이 자동 조정 */
+    }
+    .Top {
+        flex-direction: column; /* 🔥 세로 정렬 */
+        align-items: center;
+        height: auto;
+    }
+    .img {
+        width: 100%;
+    }
+    .TopcontentBox {
+        text-align: center;
+        padding-top: 2rem;
+        align-items: center;
+    }
+    .minititle {
+        font-size: 0.9rem;
+    }
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    .content {
+        font-size: 0.85rem;
+        padding-top: 1.5rem;
+    }
+    .imgbox {
+        flex-direction: column; /* 🔥 세로 정렬 */
+        align-items: center;
+        gap: 2rem;
+    }
+    .imgcontent {
+        width: 100%;
+        aspect-ratio: 1.2 / 1; /* 비율 조정 */
+    }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    .Box {
+        padding: 1.5rem;
+    }
+    .minititle {
+        font-size: 0.8rem;
+    }
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    .title {
+        font-size: 1.6rem;
+    }
+    .content {
+        font-size: 0.8rem;
+    }
+    .imgcontent {
+        aspect-ratio: 1 / 1; /* 정사각형 비율 */
+    }
+    .bold {
+        font-size: 1.5rem;
+    }
+    .font {
+        font-size: 1.2rem;
+    }
+}

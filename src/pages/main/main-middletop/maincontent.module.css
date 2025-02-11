@@ -1,0 +1,265 @@
+/* 전체 박스 스타일 */
+.Box {
+  padding: 40px 17rem 0rem 17rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* 타이틀 스타일 */
+.Title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #000;
+}
+
+/* 파란색 강조 */
+.blue {
+  color: #00B3D4;
+  display: inline;
+}
+
+/* 서브타이틀 */
+.subTitle {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 550;
+  margin-bottom: 2.5rem;
+}
+
+/* 이미지 박스 */
+.imgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 왼쪽 이미지 박스 */
+.leftimgbox {
+  width: 28rem;
+  background-image: url('/imgbox1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 5%;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+/* 왼쪽 박스 아래 검은 배경 */
+.bottombox {
+  width: 100%;
+  background-color: #000;
+  opacity: 0.4;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 30% 30%;
+  height: 8rem;
+}
+
+/* 이미지 안의 텍스트 */
+.Dell {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  left: 3rem;
+  bottom: 4rem;
+}
+
+.whatthat {
+  font-size: 1rem;
+  color: white;
+  position: absolute;
+  left: 3rem;
+  bottom: 2rem;
+}
+
+/* 오른쪽 이미지 박스 */
+.rightimgbox {
+  width: 28rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1rem;
+  gap: 1rem;
+}
+
+/* 작은 이미지들 */
+.img {
+  width: 13rem;
+  height: 13rem;
+  object-fit: cover;
+  border-radius: 11%;
+}
+
+/* MORE 버튼 */
+.more {
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #00B3D4;
+  width: 13rem;
+  height: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 11%;
+  cursor: pointer;
+}
+
+.more svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.more:hover svg {
+  transform: translateX(5px);
+}
+
+/* 하단 강조 섹션 */
+.impact {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 12rem;
+}
+
+/* 강조 텍스트 */
+.impactcontent {
+  font-size: 1.5rem;
+  color: #333333;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* 더보기 버튼 */
+.plus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plus:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.plus span {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-left: 1px;
+}
+
+/* 브랜드 이미지 */
+.brand {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* ✅ 반응형 스타일 추가 */
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+  .Box {
+      padding: 40px 5rem 0rem 5rem; /* 🔥 여백 축소 */
+  }
+  .Title {
+      font-size: 2.5rem;
+  }
+  .subTitle {
+      font-size: 1.1rem;
+  }
+  .rightimgbox, .leftimgbox {
+      width: 24rem;
+  }
+  .img {
+      width: 11rem;
+      height: 11rem;
+  }
+  .more {
+      width: 11rem;
+      height: 11rem;
+      font-size: 1.8rem;
+  }
+  .impact {
+      gap: 8rem;
+  }
+  .impactcontent {
+      font-size: 1.3rem;
+  }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  .Box {
+      padding: 2rem;
+  }
+  .Title {
+      font-size: 2rem;
+  }
+  .subTitle {
+      font-size: 1rem;
+  }
+  .imgbox {
+      flex-direction: column; /* 🔥 모바일에서는 세로 정렬 */
+      align-items: center;
+  }
+  .leftimgbox, .rightimgbox {
+      width: 100%;
+  }
+  .rightimgbox {
+    margin: 30px auto;
+    justify-content: space-between;
+}
+  .img {
+      width: 10rem;
+      height: 10rem;
+  }
+  .more {
+      width: 10rem;
+      height: 10rem;
+      font-size: 1.6rem;
+  }
+  .impact {
+      flex-direction: column; /* 🔥 세로 정렬 */
+      text-align: center;
+      gap: 3rem;
+  }
+  .impactcontent {
+      font-size: 1.2rem;
+  }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .Title {
+      font-size: 1.8rem;
+  }
+  .subTitle {
+      font-size: 0.9rem;
+  }
+  .img {
+      width: 8rem;
+      height: 8rem;
+  }
+  .more {
+      width: 8rem;
+      height: 8rem;
+      font-size: 1.4rem;
+  }
+  .impact {
+      gap: 2rem;
+  }
+  .impactcontent {
+      font-size: 1rem;
+  }
+}

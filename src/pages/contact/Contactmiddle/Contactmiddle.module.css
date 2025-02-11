@@ -1,0 +1,200 @@
+@font-face {
+  font-family: 'pretendbold';
+  src: url('/src/assets/fonts/Pretendard-Bold.ttf') format('truetype');
+}
+
+/* 전체 박스 */
+.Box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 17rem 4rem 17rem;
+  gap: 20px;
+  background-color: #ffffff;
+}
+
+/* 왼쪽 정보 박스 */
+.leftBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* 제목 */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: 'pretendbold';
+}
+
+/* 본문 내용 */
+.content {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555555;
+}
+
+/* 주소 및 이메일 박스 */
+.bluebox {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 2rem;
+}
+
+/* 왼쪽 파란색 바 */
+.blueline {
+  width: 0.5rem;
+  height: auto;
+  background-color: #00a8cf;
+  border-radius: 1rem;
+}
+
+/* 텍스트 정렬 */
+.contentbox {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 파란색 강조된 제목 */
+.blueboxtitle {
+  font-size: 2rem;
+  font-family: 'pretendbold';
+  color: black;
+  margin-bottom: 5px;
+}
+
+/* 주소 텍스트 */
+.address {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333333;
+}
+
+/* 이메일 텍스트 */
+.email {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #333333;
+}
+
+/* 전화번호 */
+.phone {
+  font-size: 2rem;
+  font-family: 'pretendbold';
+  color: #333333;
+}
+
+/* 지도 컨테이너 */
+.rightBox {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* 지도 */
+.mapContainer {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ✅ 반응형 스타일 추가 */
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+  .Box {
+    padding: 3rem 5rem; /* 🔥 여백 축소 */
+    gap: 15px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .content {
+    font-size: 0.95rem;
+  }
+  .blueboxtitle {
+    font-size: 1.8rem;
+  }
+  .email {
+    font-size: 1.3rem;
+  }
+  .phone {
+    font-size: 1.8rem;
+  }
+  .mapContainer {
+    height: 250px;
+  }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  .Box {
+    flex-direction: column; /* 🔥 세로 정렬 */
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  .leftBox {
+    width: 100%;
+    align-items: center;
+  }
+  .bluebox {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .blueline {
+    width: 100px;
+    height: 5px;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+  .content {
+    font-size: 0.9rem;
+  }
+  .blueboxtitle {
+    font-size: 1.5rem;
+  }
+  .email {
+    font-size: 1.2rem;
+  }
+  .phone {
+    font-size: 1.6rem;
+  }
+  .mapContainer {
+    height: 200px; /* 🔥 모바일에서 높이 조정 */
+  }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .Box {
+    padding: 1.5rem;
+  }
+  .title {
+    font-size: 1.4rem;
+  }
+  .content {
+    font-size: 0.85rem;
+  }
+  .blueboxtitle {
+    font-size: 1.3rem;
+  }
+  .email {
+    font-size: 1.1rem;
+  }
+  .phone {
+    font-size: 1.4rem;
+  }
+  .mapContainer {
+    height: 180px;
+  }
+}

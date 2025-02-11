@@ -1,0 +1,162 @@
+/* 공통 스타일 */
+.NaviBox {
+  width: 100%;
+  min-height: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('/mainpage.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 0;
+}
+
+/* 네비게이션 하단 */
+.NaviBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 7rem 10rem 0 17rem;
+  max-width: 1400px;  /* 🔥 화면이 너무 커지는 것 방지 */
+  margin: 0 auto; /* 🔥 가운데 정렬 */
+}
+
+/* 왼쪽 텍스트 박스 */
+.Bottomleft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px; /* 🔥 텍스트 영역 제한 */
+}
+
+/* 텍스트 스타일 */
+.subTitle {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 540;
+}
+
+.Title {
+  font-size: 2.3rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.content {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* 오른쪽 버튼 박스 */
+.Bottomright {
+  flex: 0.3;
+  display: flex;
+  justify-content: start;
+  gap: 3rem;
+  padding-top: 5.5rem;
+}
+
+/* 버튼 스타일 */
+.leftbutton,
+.rightbutton {
+  width: 50px;  /* 🔥 원래 크기로 유지 */
+  height: 50px;
+  border: 1.5px solid #ffffff;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.leftbutton:hover,
+.rightbutton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ 반응형 스타일 */
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+  .NaviBottom {
+      padding: 5rem 5rem 0 5rem;
+  }
+  .Title {
+      font-size: 2rem;
+  }
+  .content {
+      font-size: 0.9rem;
+  }
+  .Bottomright {
+      gap: 2rem;
+      padding-top: 4rem;
+  }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  .NaviBottom {
+      flex-direction: column;
+      text-align: center;
+      padding: 3rem 2rem;
+      align-items: center;
+  }
+  .Bottomleft {
+      max-width: 500px;
+      width: 100%;
+  }
+  .Bottomright {
+      width: 100%;
+      justify-content: center;
+      gap: 1.5rem;
+      padding-top: 2rem;
+  }
+  .subTitle {
+      font-size: 1.4rem;
+  }
+  .Title {
+      font-size: 1.8rem;
+  }
+  .content {
+      font-size: 0.8rem;
+  }
+  .leftbutton, .rightbutton {
+      width: 45px;  /* 🔥 버튼 크기 살짝 줄이기 */
+      height: 45px;
+      font-size: 22px;
+  }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .NaviBottom {
+      padding: 2rem 1rem;
+  }
+  .Bottomleft {
+      max-width: 400px;
+  }
+  .subTitle {
+      font-size: 1.2rem;
+  }
+  .Title {
+      font-size: 1.5rem;
+  }
+  .content {
+      font-size: 0.7rem;
+  }
+  .leftbutton, .rightbutton {
+      width: 40px;  /* 🔥 버튼 크기 좀 더 줄이기 */
+      height: 40px;
+      font-size: 20px;
+  }
+}

@@ -1,0 +1,83 @@
+/* 네비게이션 바 */
+.NaviTop {
+  height: 19%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* 🔥 좌우 정렬 */
+  gap: 1.3rem;
+  padding: 1rem 17rem;
+}
+
+/* CI (로고) 스타일 */
+.CI {
+  width: 12%; /* 🔥 로고 크기 조정 */
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* 메뉴 아이템 */
+.Topitem {
+  padding: 1.2rem;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.Topitem:hover {
+  color: #00a8cf; /* 마우스 호버 효과 */
+}
+
+/* 활성화된 메뉴 */
+.active {
+  color: #00a8cf;
+}
+
+/* ✅ 반응형 스타일 */
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+  .NaviTop {
+      padding: 1rem 5rem; /* 여백 조정 */
+  }
+  .CI {
+      width: 15%;
+  }
+  .Topitem {
+      font-size: 1rem;
+      padding: 1rem;
+  }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  .NaviTop {
+      flex-direction: column; /* 🔥 모바일에서는 세로 정렬 */
+      align-items: center;
+      padding: 1rem 2rem;
+  }
+  .CI {
+      width: 20%;
+      padding-bottom: 1rem; /* 로고 아래 간격 */
+  }
+  .Topitem {
+      font-size: 0.9rem;
+      padding: 0.8rem;
+  }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .NaviTop {
+      padding: 1rem;
+      text-align: center;
+  }
+  .CI {
+      width: 25%;
+  }
+  .Topitem {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+  }
+}

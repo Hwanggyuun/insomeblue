@@ -1,0 +1,31 @@
+/* ✅ TermsAndPrivacy.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .linkText {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    padding: 5px 0;
+  }
+  
+  .linkText:hover {
+    text-decoration: underline;
+  }
+  
+  .contentBox {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+  

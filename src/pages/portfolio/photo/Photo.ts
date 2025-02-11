@@ -1,0 +1,117 @@
+type ImageGroup = {
+    images: string[];
+  };
+  
+  type GroupedImages = {
+    [key: number]: ImageGroup;
+  };
+  
+  const groupedImages: GroupedImages = {
+    0: {
+      images: [
+        "/about1.jpg",
+        "/about2.jpg",
+        "/about3.jpg",
+        "/imgbox1.jpg",
+        "/imgbox2.jpg",
+        "/imgbox3.jpg",
+        "/imgbox4.jpg",
+        "/insomeCI.png",
+        "/insomeCIgray.png",
+        "/mainpage.jpg",
+        "/Mainpage2.jpg",
+        "/mainpage3.jpg",
+        "/navitop.jpg",
+        "/service1.jpg",
+        "/service2.jpg",
+        "/service3.jpg",
+        "/service4.jpg",
+      ],
+    },
+    1: {
+      images: [
+        "/imgbox3.jpg",
+        "/imgbox1.jpg",
+        "/service1.jpg",
+        "/service3.jpg",
+        "/Mainpage2.jpg",
+        "/about2.jpg",
+        "/navitop.jpg",
+        "/service4.jpg",
+        "/mainpage.jpg",
+        "/about3.jpg",
+        "/insomeCIgray.png",
+        "/imgbox2.jpg",
+        "/imgbox4.jpg",
+        "/insomeCI.png",
+        "/service2.jpg",
+        "/about1.jpg",
+        "/mainpage3.jpg",
+      ],
+    },
+    2: {
+      images: [
+        "/service4.jpg",
+        "/mainpage.jpg",
+        "/about1.jpg",
+        "/about3.jpg",
+        "/service2.jpg",
+        "/imgbox1.jpg",
+        "/imgbox4.jpg",
+        "/mainpage3.jpg",
+        "/imgbox2.jpg",
+        "/navitop.jpg",
+        "/about2.jpg",
+        "/service1.jpg",
+        "/insomeCIgray.png",
+        "/Mainpage2.jpg",
+        "/imgbox3.jpg",
+        "/insomeCI.png",
+        "/service3.jpg",
+      ],
+    },
+    3: {
+      images: [
+        "/service3.jpg",
+        "/service2.jpg",
+        "/imgbox4.jpg",
+        "/imgbox1.jpg",
+        "/about2.jpg",
+        "/about3.jpg",
+        "/Mainpage2.jpg",
+        "/navitop.jpg",
+        "/insomeCI.png",
+        "/service1.jpg",
+        "/imgbox3.jpg",
+        "/mainpage3.jpg",
+        "/about1.jpg",
+        "/insomeCIgray.png",
+        "/imgbox2.jpg",
+        "/service4.jpg",
+        "/mainpage.jpg",
+      ],
+    },
+    4: {
+      images: [
+        "/navitop.jpg",
+        "/about3.jpg",
+        "/service4.jpg",
+        "/imgbox3.jpg",
+        "/about2.jpg",
+        "/imgbox4.jpg",
+        "/imgbox1.jpg",
+        "/mainpage3.jpg",
+        "/mainpage.jpg",
+        "/about1.jpg",
+        "/service2.jpg",
+        "/insomeCIgray.png",
+        "/insomeCI.png",
+        "/Mainpage2.jpg",
+        "/service1.jpg",
+        "/service3.jpg",
+        "/imgbox2.jpg",
+      ],
+    },
+  };
+  
+  export default groupedImages;

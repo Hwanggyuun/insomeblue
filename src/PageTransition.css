@@ -1,0 +1,44 @@
+/* 기본 상태 (투명) */
+.fade-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* 나타날 때 (0.3초 동안 투명도 증가 + 슬라이드 업) */
+.fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* 사라질 때 (투명도 줄어들고 슬라이드 다운) */
+.fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 사라지는 중 */
+.fade-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.slide-enter {
+    opacity: 0;
+    transform: translateX(50px);
+}
+.slide-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+.slide-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+.slide-exit-active {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    
+}

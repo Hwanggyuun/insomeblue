@@ -1,0 +1,169 @@
+/* 전체 배경 */
+.background {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 4rem 17rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 왼쪽 콘텐츠 */
+.leftcontent {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  border-right: gray solid 1px;
+}
+
+/* 로고 */
+.img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* 주소 */
+.address {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* 정보 리스트 */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.infor {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+/* 파란색 강조 */
+.blue {
+  color: #00a8cf;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* 저작권 문구 */
+.water {
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  margin-top: 15px;
+}
+
+/* 오른쪽 콘텐츠 */
+.rightcontent {
+  max-width: 30%;
+}
+
+/* 링크 박스 */
+.rightcontentbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+/* 클릭 가능한 요소들 */
+.bluecontent {
+  color: #00a8cf;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.content {
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.content:hover,
+.bluecontent:hover {
+  text-decoration: underline;
+}
+
+/* 이용약관 및 개인정보 처리방침 팝업 */
+.contentBox {
+  width: 100%;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  font-size: 14px;
+  line-height: 1.2;
+  white-space: pre-wrap;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 2rem;
+}
+
+/* ✅ 반응형 스타일 추가 */
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+  .background {
+      padding: 3rem 5rem; /* 여백 축소 */
+  }
+  .leftcontent {
+      width: 65%;
+  }
+  .rightcontent {
+      max-width: 35%;
+  }
+  .bluecontent, .content {
+      font-size: 0.85rem;
+  }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  .background {
+      flex-direction: column; /* 🔥 세로 정렬 */
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+  }
+  .leftcontent {
+      width: 100%;
+      border-right: none; /* 🔥 테두리 제거 */
+      align-items: center;
+  }
+  .rightcontent {
+      max-width: 100%;
+      text-align: center;
+      margin-top: 1.5rem;
+  }
+  .img {
+      width: 100px; /* 로고 크기 조정 */
+  }
+  .address, .infor {
+      font-size: 0.85rem;
+  }
+  .bluecontent, .content {
+      font-size: 0.8rem;
+  }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .background {
+      padding: 1.5rem;
+  }
+  .img {
+      width: 90px;
+  }
+  .address, .infor {
+      font-size: 0.75rem;
+  }
+  .bluecontent, .content {
+      font-size: 0.75rem;
+  }
+}

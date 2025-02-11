@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'pretendMedium';
+    src: url('/src/assets/fonts/Pretendard-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'pretend';
+    src: url('/src/assets/fonts/Pretendard-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'pretendbold';
+    src: url('/src/assets/fonts/Pretendard-Bold.ttf') format('truetype');
+}
+
+/* 상단 텍스트 */
+.Top {
+    height: 4rem;
+    font-family: 'pretend';
+    padding: 0 17rem;
+    line-height: 4rem;
+    border-bottom: 1px solid gray;
+}
+
+/* 메인 콘텐츠 박스 */
+.middlebox {
+    padding: 0 17rem;
+}
+
+/* 필터 버튼 그룹 */
+.middletop {
+    display: flex;
+    flex-wrap: wrap; /* 🔥 버튼이 많아지면 줄바꿈 허용 */
+    justify-content: flex-start;
+    gap: 0.8rem;
+    padding: 2rem;
+}
+
+/* 필터 버튼 */
+.middleitem {
+    border: 1px solid lightgray;
+    color: lightgray;
+    font-family: 'pretendMedium';
+    padding: 6px 14px;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.blue {
+    color: white;
+    background-color: #00a8cf;
+    font-family: 'pretendMedium';
+    padding: 6px 14px;
+    border-radius: 1rem;
+}
+
+/* 이미지 박스 */
+.imgbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+/* 개별 이미지 박스 */
+.imgcontent {
+    width: 23%;
+    aspect-ratio: 1.3/1;
+}
+
+/* 이미지 스타일 */
+.img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* 페이지네이션 스타일 */
+.numberbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 3rem 0;
+}
+
+/* 마지막 텍스트 */
+.last {
+    margin: 4rem auto;
+    font-family: 'pretendbold';
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* ✅ 반응형 스타일 추가 */
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+    .Top {
+        padding: 0 5rem; /* 🔥 여백 축소 */
+    }
+    .middlebox {
+        padding: 0 5rem;
+    }
+    .imgcontent {
+        width: 30%; /* 🔥 3개씩 배치 */
+    }
+    .last {
+        font-size: 2rem;
+    }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+    .Top {
+        padding: 0 2rem;
+    }
+    .middlebox {
+        padding: 0 2rem;
+    }
+    .middletop {
+        justify-content: center; /* 🔥 모바일에서는 버튼 중앙 정렬 */
+    }
+    .imgbox {
+        justify-content: center;
+    }
+    .imgcontent {
+        width: 45%; /* 🔥 2개씩 배치 */
+    }
+    .last {
+        font-size: 1.8rem;
+    }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    .Top {
+        padding: 0 1rem;
+    }
+    .middlebox {
+        padding: 0 1rem;
+    }
+    .imgcontent {
+        width: 100%; /* 🔥 한 줄 1개씩 */
+    }
+    .last {
+        font-size: 1.5rem;
+    }
+}

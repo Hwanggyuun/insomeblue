@@ -1,0 +1,139 @@
+/* 전체 박스 스타일 */
+.Box {
+    padding: 2rem 17rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* 개별 아이템 박스 */
+.itembox {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* 이미지 스타일 */
+.img {
+    width: 49%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* 텍스트 박스 */
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 3rem;
+}
+
+/* 폰트 설정 */
+@font-face {
+    font-family: 'prebold';
+    src: url('/src/assets/fonts/Pretendard-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'pretend';
+    src: url('/src/assets/fonts/Pretendard-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'pretendli';
+    src: url('/src/assets/fonts/Pretendard-Light.ttf') format('truetype');
+}
+
+/* 번호 스타일 */
+.number {
+    font-family: 'prebold';
+    color: lightgray;
+    font-size: 3rem;
+}
+
+/* 제목 */
+.title {
+    font-family: 'prebold';
+    font-size: 3rem;
+}
+
+/* 본문 내용 */
+.content {
+    padding-top: 2rem;
+    font-family: 'pretend';
+    font-size: 1rem;
+}
+
+/* ✅ 반응형 스타일 추가 */
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+    .Box {
+        padding: 2rem 5rem; /* 🔥 여백 축소 */
+    }
+    .itembox {
+        gap: 1.5rem;
+    }
+    .img {
+        width: 45%;
+    }
+    .item {
+        width: 55%;
+        padding: 2rem;
+    }
+    .number {
+        font-size: 2.5rem;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .content {
+        font-size: 0.9rem;
+    }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+    .Box {
+        padding: 2rem;
+    }
+    .itembox {
+        flex-direction: column; /* 🔥 세로 정렬 */
+        align-items: center;
+        text-align: center;
+    }
+    .img {
+        width: 100%;
+    }
+    .item {
+        width: 100%;
+        padding: 1.5rem;
+    }
+    .number {
+        font-size: 2rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .content {
+        font-size: 0.85rem;
+    }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    .Box {
+        padding: 1.5rem;
+    }
+    .itembox {
+        gap: 1rem;
+    }
+    .number {
+        font-size: 1.8rem;
+    }
+    .title {
+        font-size: 1.6rem;
+    }
+    .content {
+        font-size: 0.8rem;
+    }
+}

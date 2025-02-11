@@ -1,0 +1,127 @@
+/* 전체 배경 */
+.background {
+  background-image: url('/mainpage3.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 컨텐츠 */
+.content {
+  padding: 3rem 17rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔥 모바일에서 중앙 정렬 */
+}
+
+/* 작은 제목 */
+.Top {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 큰 제목 */
+.Topwhite {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* 중간 설명 */
+.middle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* 버튼 스타일 */
+.know {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 11rem;
+}
+
+.know:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+/* ✅ 반응형 스타일 추가 */
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+  .content {
+      padding: 3rem 5rem; /* 🔥 여백 축소 */
+  }
+  .Topwhite {
+      font-size: 1.8rem;
+  }
+  .middle {
+      font-size: 0.9rem;
+  }
+  .know {
+      padding: 12px 25px;
+      font-size: 0.9rem;
+  }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  .background {
+      height: auto; /* 🔥 높이 자동 조정 */
+      padding: 2rem 0;
+  }
+  .content {
+      padding: 2rem;
+  }
+  .Top {
+      font-size: 1rem;
+  }
+  .Topwhite {
+      font-size: 1.5rem;
+  }
+  .middle {
+      font-size: 0.85rem;
+  }
+  .know {
+      width: 100%; /* 🔥 모바일에서 가득 차게 */
+      padding: 10px 20px;
+  }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .content {
+      padding: 1.5rem;
+  }
+  .Top {
+      font-size: 0.9rem;
+  }
+  .Topwhite {
+      font-size: 1.3rem;
+  }a
+  .middle {
+      font-size: 0.8rem;
+  }
+  .know {
+      width: 100%;
+      padding: 8px 15px;
+      font-size: 0.85rem;
+  }
+}

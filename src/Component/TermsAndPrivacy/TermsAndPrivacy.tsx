@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./TermsAndPrivacy.module.css"; // ✅ CSS Module import
 
 const TermsAndPrivacy = () => {
@@ -8,7 +8,12 @@ const TermsAndPrivacy = () => {
   return (
     <div className={styles.container}>
       {/* 이용약관 */}
-      <button className={styles.linkText} onClick={() => setShowTerms(!showTerms)}>이용약관</button>
+      <button
+        className={styles.linkText}
+        onClick={() => setShowTerms(!showTerms)}
+      >
+        이용약관
+      </button>
       {showTerms && (
         <div className={styles.contentBox}>
           <h2>이용약관</h2>
@@ -31,7 +36,12 @@ const TermsAndPrivacy = () => {
       )}
 
       {/* 개인정보처리방침 */}
-      <button className={styles.linkText} onClick={() => setShowPrivacy(!showPrivacy)}>개인정보처리방침</button>
+      <button
+        className={styles.linkText}
+        onClick={() => setShowPrivacy(!showPrivacy)}
+      >
+        개인정보처리방침
+      </button>
       {showPrivacy && (
         <div className={styles.contentBox}>
           <h2>개인정보처리방침</h2>

@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './portfoliomiddle.module.css';
-import photo from '../photo/Photo';
-import Pagination from './Pagination/Pagination'; // Pagination 컴포넌트 분리 (아래 참고)
+import React from "react";
+import styles from "./portfoliomiddle.module.css";
+import photo from "../photo/Photo";
+import Pagination from "./Pagination/Pagination"; // Pagination 컴포넌트 분리 (아래 참고)
 
 const PortfolioMiddle: React.FC = () => {
   const [count, setCount] = React.useState<number>(0); // 현재 항목 선택 상태
@@ -13,11 +13,11 @@ const PortfolioMiddle: React.FC = () => {
   };
 
   const items = [
-    '컨퍼런스/세미나',
-    '전시/기획/프로모션',
-    '오프라인 행사/사내 이벤트',
-    '온라인 프로모션/웨비나',
-    '골프 행사',
+    "컨퍼런스/세미나",
+    "전시/기획/프로모션",
+    "오프라인 행사/사내 이벤트",
+    "온라인 프로모션/웨비나",
+    "골프 행사",
   ];
 
   const imagesPerPage = 8; // 페이지당 이미지 수
@@ -50,7 +50,7 @@ const PortfolioMiddle: React.FC = () => {
         <div className={styles.imgbox}>
           {displayedImages.map((item, index) => (
             <div key={index} className={styles.imgcontent}>
-                <img  src={item} alt="img" className={styles.img} />
+              <img src={item} alt="img" className={styles.img} loading="lazy" />
             </div>
           ))}
         </div>
@@ -59,7 +59,9 @@ const PortfolioMiddle: React.FC = () => {
           currentPage={number}
           setPage={setNumber} // 상태 변경 함수 전달
         />
-        <div className={styles.last}>If you can imagine it, we can create it!</div>
+        <div className={styles.last}>
+          If you can imagine it, we can create it!
+        </div>
       </div>
     </div>
   );

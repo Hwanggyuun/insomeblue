@@ -34,7 +34,7 @@ const Contactmiddle: React.FC = () => {
             <div className={styles.blueboxtitle}>주소</div>
             <div className={styles.address}>
               서울시 성동구 아차산로 17길 49
-              <br /> 생각공장데시앙 플렉스 515호
+              <br /> 생각공장데시앙플렉스 515호
             </div>
           </div>
         </div>

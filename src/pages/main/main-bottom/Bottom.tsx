@@ -12,7 +12,7 @@ const Bottom: React.FC = () => {
         <div className={styles.address}>
           서울시 성동구 아차산로 17길 49 생각공장데시앙플렉스 515호
           <br />
-          상호:(주)인썸블루 | 대표자 : 이호성 | 사업자번호 : 434-87-01595
+          상호 : (주)인썸블루 | 대표자 : 이호성 | 사업자번호 : 434-87-01595
         </div>
         <div className={styles.info}>
           <div className={styles.infor}>

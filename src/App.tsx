@@ -1,14 +1,11 @@
-// import { Router } from 'react-router-dom'
-import './App.css'
-import AppRouter from './Router'
-// import Main from './pages/main/main'
+import "./App.css";
+import AppRouter from "./Router";
 function App() {
-
   return (
     <>
-     <AppRouter/>
+      <AppRouter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

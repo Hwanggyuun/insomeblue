@@ -1,22 +1,19 @@
-/* 네비게이션 바 */
 .NaviTop {
   height: 19%;
   display: flex;
   align-items: center;
-  justify-content: space-between;  /* 🔥 좌우 정렬 */
+  justify-content: space-between; 
   gap: 1.3rem;
   padding: 1rem 17rem;
 }
 
-/* CI (로고) 스타일 */
 .CI {
-  width: 12%; /* 🔥 로고 크기 조정 */
+  width: 12%; 
   height: auto;
   object-fit: contain;
   cursor: pointer;
 }
 
-/* 메뉴 아이템 */
 .Topitem {
   padding: 1.2rem;
   color: white;
@@ -26,20 +23,16 @@
 }
 
 .Topitem:hover {
-  color: #00a8cf; /* 마우스 호버 효과 */
+  color: #00a8cf; 
 }
 
-/* 활성화된 메뉴 */
 .active {
   color: #00a8cf;
 }
 
-/* ✅ 반응형 스타일 */
-
-/* 태블릿 (1024px 이하) */
 @media (max-width: 1024px) {
   .NaviTop {
-      padding: 1rem 5rem; /* 여백 조정 */
+      padding: 1rem 5rem; 
   }
   .CI {
       width: 15%;
@@ -50,16 +43,15 @@
   }
 }
 
-/* 모바일 (768px 이하) */
 @media (max-width: 768px) {
   .NaviTop {
-      flex-direction: column; /* 🔥 모바일에서는 세로 정렬 */
+      flex-direction: column; 
       align-items: center;
       padding: 1rem 2rem;
   }
   .CI {
       width: 20%;
-      padding-bottom: 1rem; /* 로고 아래 간격 */
+      padding-bottom: 1rem; 
   }
   .Topitem {
       font-size: 0.9rem;
@@ -67,7 +59,6 @@
   }
 }
 
-/* 작은 모바일 (480px 이하) */
 @media (max-width: 480px) {
   .NaviTop {
       padding: 1rem;

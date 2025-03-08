@@ -8,14 +8,12 @@
     src: url('/src/assets/fonts/Pretendard-Black.ttf') format('truetype');
   }
   
-  /* 기본 스타일 */
   body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     
   }
   
-  /* 한글 텍스트에만 다른 글꼴 적용 */
   body *:lang(ko) {
     font-family: 'Pretendard', sans-serif;
   }

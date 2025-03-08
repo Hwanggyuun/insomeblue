@@ -1,41 +1,72 @@
-import React, { useState } from 'react';
-import styles from './Bottom.module.css';
+import React, { useState } from "react";
+import styles from "./Bottom.module.css";
 
 const Bottom: React.FC = () => {
-    const [showTerms, setShowTerms] = useState(false);
-    const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
+  const [showPrivacy, setShowPrivacy] = useState(false);
 
-    return (
-        <div className={styles.background}>
-            <div className={styles.leftcontent}>
-                <img src="/insomeCIgray.png" alt="insome" className={styles.img} />
-                <div className={styles.address}>
-                    서울시 성동구 아차산로 17길 49 생각공장데시앙플렉스 515호
-                    <br />상호:(주)인썸블루 | 대표자 : 이호성 | 사업자번호 : 434-87-01595
-                </div>
-                <div className={styles.info}>
-                    <div className={styles.infor}><div className={styles.blue}>T</div> 02-462-9981</div>
-                    <div className={styles.infor}><div className={styles.blue}>E-MAIL</div> blue@insomeblue.com</div>
-                    <div className={styles.infor}><div className={styles.blue}>FAX</div> 02-6499-7533</div>
-                </div>
-                <div className={styles.water}>Copyrights ⓒ 2025 All Rights Reserved by insomeblue</div>
-            </div>
+  return (
+    <div className={styles.background}>
+      <div className={styles.leftcontent}>
+        <img src="/insomeCIgray.png" alt="insome" className={styles.img} />
+        <div className={styles.address}>
+          서울시 성동구 아차산로 17길 49 생각공장데시앙플렉스 515호
+          <br />
+          상호:(주)인썸블루 | 대표자 : 이호성 | 사업자번호 : 434-87-01595
+        </div>
+        <div className={styles.info}>
+          <div className={styles.infor}>
+            <div className={styles.blue}>T</div> 02-462-9981
+          </div>
+          <div className={styles.infor}>
+            <div className={styles.blue}>E-MAIL</div> blue@insomeblue.com
+          </div>
+          <div className={styles.infor}>
+            <div className={styles.blue}>FAX</div> 02-6499-7533
+          </div>
+        </div>
+        <div className={styles.water}>
+          Copyrights ⓒ 2025 All Rights Reserved by insomeblue
+        </div>
+      </div>
 
-            <div className={styles.rightcontent}>
-                <div className={styles.rightcontentbox}>
-                    <a className={styles.bluecontent} href="/files/2025_인썸블루_회사소개서.pdf" download>회사소개서</a>
-                    <div className={styles.content} onClick={() => setShowTerms(!showTerms)}>이용약관</div>
-                    <div className={styles.content} onClick={() => setShowPrivacy(!showPrivacy)}>개인정보처리방침</div>
-                </div>
-            </div>
+      <div className={styles.rightcontent}>
+        <div className={styles.rightcontentbox}>
+          <a
+            className={styles.bluecontent}
+            href="/files/2025_인썸블루_회사소개서.pdf"
+            download
+          >
+            회사소개서
+          </a>
+          <div
+            className={styles.content}
+            onClick={() => setShowTerms(!showTerms)}
+          >
+            이용약관
+          </div>
+          <div
+            className={styles.content}
+            onClick={() => setShowPrivacy(!showPrivacy)}
+          >
+            개인정보처리방침
+          </div>
+        </div>
+      </div>
 
-            {/* 이용약관 내용 */}
-            {showTerms && (
-                <div className={styles.contentBox}>
-                    <button className={styles.closeButton} onClick={() => setShowTerms(!showTerms)}>✖</button>
+      {showTerms && (
+        <div className={styles.contentBox}>
+          <button
+            className={styles.closeButton}
+            onClick={() => setShowTerms(!showTerms)}
+          >
+            ✖
+          </button>
 
-                    <h2>이용약관</h2>
-                    <div dangerouslySetInnerHTML={{ __html: `
+          <h2>이용약관</h2>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `
         <h2><strong>제1조 (목적)</strong></h2>
         <p>본 약관은 <strong>인썸블루(insomeBLUE)</strong>(이하 "회사")가 운영하는 웹사이트(이하 "사이트")를 이용하는 이용자와 회사 간의 권리, 의무 및 책임 사항을 규정하는 것을 목적으로 합니다.</p>
 
@@ -89,18 +120,24 @@ const Bottom: React.FC = () => {
 
         <h3><strong>부칙</strong></h3>
         <p>본 약관은 2025년 2월 6일부터 시행됩니다.</p>
-    ` }} />
+    `,
+            }}
+          />
+        </div>
+      )}
 
-                </div>
-            )}
+      {showPrivacy && (
+        <div className={styles.contentBox}>
+          <button
+            className={styles.closeButton}
+            onClick={() => setShowPrivacy(!showPrivacy)}
+          >
+            ✖
+          </button>
 
-            {/* 개인정보처리방침 내용 */}
-            {showPrivacy && (
-    <div className={styles.contentBox}>
-        <button className={styles.closeButton} onClick={() => setShowPrivacy(!showPrivacy)}>✖</button>
-
-        {/* dangerouslySetInnerHTML 사용하여 HTML 직접 렌더링 */}
-        <div dangerouslySetInnerHTML={{ __html: `
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `
             <h2><strong>개인정보처리방침</strong></h2>
             인썸블루(insomeBLUE)(이하 "회사")는 고객의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 및 관련 법령을 준수합니다. 
             본 개인정보처리방침은 회사가 수집하는 개인정보의 항목, 이용 목적, 보관 기간, 제3자 제공, 위탁처리 등에 대한 내용을 포함하고 있습니다.
@@ -165,12 +202,13 @@ const Bottom: React.FC = () => {
             변경 사항은 홈페이지를 통해 공지합니다.
 
             <strong>최종 개정일:</strong> 2025년 2월 6일
-        ` }} />
-    </div>
-)}
-
+        `,
+            }}
+          />
         </div>
-    );
+      )}
+    </div>
+  );
 };
 
 export default Bottom;

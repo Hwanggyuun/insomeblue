@@ -13,26 +13,22 @@ import Contact from "./pages/contact/Contact";
 import Service from "./pages/service/Service";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Client from "./pages/client/Client";
-import "./PageTransition.css"; // 애니메이션 CSS 파일 추가
+import "./PageTransition.css";
 
 const AnimatedRoutes = () => {
-  const location = useLocation(); // 현재 경로 감지
+  const location = useLocation();
 
   return (
     <SwitchTransition mode="out-in">
-      <CSSTransition
-        key={location.pathname} // 경로가 바뀔 때마다 애니메이션 실행
-        classNames="fade"
-        timeout={300} // 애니메이션 지속 시간
-      >
+      <CSSTransition key={location.pathname} classNames="fade" timeout={300}>
         <Routes location={location}>
           <Route path="/" element={<Navigate to="/main" replace />} />
           <Route path="/main" element={<Main />} />
-          <Route path="/main/about" element={<About />} />
+          <Route path="/main/About" element={<About />} />
           <Route path="/main/Contact" element={<Contact />} />
-          <Route path="/main/service" element={<Service />} />
-          <Route path="/main/portfolio" element={<Portfolio />} />
-          <Route path="/main/client" element={<Client />} />
+          <Route path="/main/Service" element={<Service />} />
+          <Route path="/main/Portfolio" element={<Portfolio />} />
+          <Route path="/main/Client" element={<Client />} />
         </Routes>
       </CSSTransition>
     </SwitchTransition>
@@ -43,7 +39,7 @@ const AppRouter = () => {
   return (
     <Router>
       <AnimatedRoutes />
-      <Bottom /> {/* 항상 하단에 고정 */}
+      <Bottom />
     </Router>
   );
 };

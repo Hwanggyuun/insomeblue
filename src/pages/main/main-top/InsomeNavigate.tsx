@@ -7,7 +7,7 @@ const slides = [
     subTitle: "상상이 현실이 되는 ",
     title: "기업 이벤트/행사 토탈 솔루션",
     content:
-      "차별화된 기획, 제작, 운영, 관리\n분야별 전문가가 함께하는 인썸블루와 시작하세요",
+      "차별화된 기획, 제작, 운영, 관리\n분야별 전문가가 함께하는 인썸블루와 시작하세요.",
   },
   {
     image: "/mainpageb.jpg",
@@ -18,7 +18,7 @@ const slides = [
   },
   {
     image: "/mainpagec.jpg",
-    subTitle: "무엇을 원하는",
+    subTitle: "무엇을 원하든",
     title: "클라이언트 1:1 맞춤 진행",
     content: "규모/기간/지역/타겟별 다양한 행사 기획과 진행이 가능합니다.",
   },

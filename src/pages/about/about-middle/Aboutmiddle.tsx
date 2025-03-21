@@ -11,7 +11,7 @@ const AboutMiddle: React.FC = () => {
           <div className={styles.title}>인썸블루의 맞춤 토탈 솔루션</div>
           <div className={styles.content}>
             상상을 넘어선 최상의 서비스를 위해,
-            <br /> 준비해 나가는 모든 과정부터 마무리까지지
+            <br /> 준비해 나가는 모든 과정부터 마무리까지
             <br /> 고객사의 입장에서 생각하고 움직이겠습니다.
           </div>
         </div>

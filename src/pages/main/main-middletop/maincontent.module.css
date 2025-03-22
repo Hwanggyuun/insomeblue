@@ -183,7 +183,7 @@
 
 @media (max-width: 768px) {
   .Box {
-      padding: 2rem;
+      padding: 0;
   }
   .Title {
       font-size: 2rem;
@@ -202,15 +202,8 @@
     margin: 30px auto;
     justify-content: space-between;
 }
-  .img {
-      width: 10rem;
-      height: 10rem;
-  }
-  .more {
-      width: 10rem;
-      height: 10rem;
-      font-size: 1.6rem;
-  }
+  
+ 
   .impact {
       flex-direction: column; 
       text-align: center;
@@ -228,15 +221,7 @@
   .subTitle {
       font-size: 0.9rem;
   }
-  .img {
-      width: 8rem;
-      height: 8rem;
-  }
-  .more {
-      width: 8rem;
-      height: 8rem;
-      font-size: 1.4rem;
-  }
+ 
   .impact {
       gap: 2rem;
   }

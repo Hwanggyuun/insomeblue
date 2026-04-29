@@ -26,15 +26,13 @@ jobs:
           VITE_IMAGEKIT_BASE_URL: ${{ secrets.VITE_IMAGEKIT_BASE_URL }}
         run: npm run build
 
-      - name: Deploy via SFTP (scp)
+      - name: Deploy via SFTP (scp) using password
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USERNAME }}
-          # use SSH private key (set in Actions secrets). If you prefer password auth, replace `key` with `password`.
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          # optional passphrase for the private key
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          # password-based SFTP (set SFTP_PASSWORD in Secrets)
+          password: ${{ secrets.SFTP_PASSWORD }}
           port: 22
           source: "./dist/*"
           target: ${{ secrets.SFTP_DESTINATION }}/

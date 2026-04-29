@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./mainContent.module.css";
+import styles from "./maincontent.module.css";
 import { useNavigate } from "react-router-dom";
 const MainContent: React.FC = () => {
   const navigate = useNavigate();

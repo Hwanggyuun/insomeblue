@@ -21,6 +21,9 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          VITE_KAKAOMAP_JAVASCRIPT_APP_KEY: ${{ secrets.VITE_KAKAOMAP_JAVASCRIPT_APP_KEY }}
+          VITE_IMAGEKIT_BASE_URL: ${{ secrets.VITE_IMAGEKIT_BASE_URL }}
         run: npm run build
 
       - name: Deploy via FTP

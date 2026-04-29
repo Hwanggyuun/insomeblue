@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import styles from "./portfoliomiddle.module.css";
 import Pagination from "./Pagination/Pagination";
 import { storage } from "../../../firebase"; // ✅ Firebase 설정 가져오기
-import { ref, listAll, getDownloadURL, getMetadata } from "firebase/storage";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
+import { toImageKitUrl } from "../../../utils/imageKit";
 
 type ImageCategories =
   | "conference"
@@ -35,47 +36,46 @@ const PortfolioMiddle: React.FC = () => {
   const imagesPerPage = 8;
   const [loading, setLoading] = useState<boolean>(false);
 
-  // ✅ Firebase Storage에서 선택된 카테고리의 이미지 가져오기
-  const fetchImagesFromStorage = async (category: ImageCategories) => {
-    setLoading(true);
-    try {
-      const folderRef = ref(storage, `/${category}/`);
-      const fileList = await listAll(folderRef);
-
-      // ✅ `getMetadata()`로 빠르게 파일 경로 가져오기
-      const urls = await Promise.all(
-        fileList.items.map(async (file) => {
-          const metadata = await getMetadata(file); // 🔥 getMetadata() 활용
-          return metadata.fullPath; // ✅ 파일의 전체 경로 가져오기
-        })
-      );
-
-      // ✅ `getDownloadURL()`을 비동기 처리하여 성능 최적화
-      const downloadUrls = await Promise.all(
-        urls.map(async (path) => {
-          return await getDownloadURL(ref(storage, path));
-        })
-      );
-
-      setImages(downloadUrls);
-    } catch (error) {
-      console.error("🔥 Error fetching images:", error);
-      setImages([]);
-    }
-    setLoading(false);
-  };
-
-  // ✅ 첫 번째 로딩 시 기본 카테고리(`conference`)의 이미지 가져오기
   useEffect(() => {
-    fetchImagesFromStorage(selectedCategory);
-  }, []);
+    let isMounted = true;
+
+    const fetchImagesFromStorage = async () => {
+      setLoading(true);
+      try {
+        const folderRef = ref(storage, `${selectedCategory}/`);
+        const fileList = await listAll(folderRef);
+
+        const urls = await Promise.all(
+          fileList.items.map(async (file) => getDownloadURL(file))
+        );
+
+        if (isMounted) {
+          setImages(urls.map((url) => toImageKitUrl(url)));
+        }
+      } catch (error) {
+        console.error("🔥 Error fetching images:", error);
+        if (isMounted) {
+          setImages([]);
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchImagesFromStorage();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedCategory]);
 
   // ✅ 카테고리를 변경하면 해당 폴더에서 새 이미지 가져오기
   const handleCategoryChange = (category: ImageCategories) => {
     if (category === selectedCategory) return;
     setSelectedCategory(category);
     setCurrentPage(1);
-    fetchImagesFromStorage(category);
   };
 
   // ✅ 페이지네이션 적용
